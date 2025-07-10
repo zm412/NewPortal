@@ -11,7 +11,7 @@ const FilterBlock = (props) => {
   let list2 = categories.filter(item => item.type_content != 'null').map((item, i) => <option key={i} value={item.name}>{item.name}</option>)
   return(
     <div>
-      <Button variant='success' onClick={(e)=> document.querySelector("#id_name_cat" ).classList.toggle('none_display')}>Filters</Button>
+      <button className="btn-basic btn-yellow mt-2 p-2 center_cl col-sm-4" onClick={(e)=> document.querySelector("#id_name_cat" ).classList.toggle('none_display')}>Filters</button>
 
     <div  id="id_name_cat" className='none_display'>
       <form onSubmit={props.chooseName} >
@@ -105,7 +105,7 @@ export const Common_line = () => {
 
     {
       quantity > limit_num && counter < last_page &&
-       <Button onClick={button_next} variant="success" className="m-3">Next</Button>
+       <button onClick={button_next} className="btn-basic btn-yellow mt-2 p-2 center_cl col-sm-4">Next</button>
     }
    </div>
   ) 

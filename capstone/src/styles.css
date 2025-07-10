@@ -4,10 +4,40 @@
   box-sizing: border-box;
 }
 
+.container-custom {
+    max-inline-size: 99rem;
+    inline-size: auto;
+    padding-inline: 18px;
+    box-sizing: border-box;
+    position: relative;
+    margin-block: 0;
+    margin-inline: auto;
+
+    &.container-flex {
+        display: flex ;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &.container--full {
+        padding-inline: 0;
+        margin-block: 0;
+        margin-inline: auto;
+        max-inline-size: 1720px;
+    }
+}
+
 @media (max-width: 991px) {
   .nav {
-    gap: 0;
     background-color: #28504585;
+  }
+
+  .buttons_block {
+      margin-inline: 0;
+      display: grid;
+      grid-template-rows: 65px 65px 65px;
+      margin: 30px;
   }
 
   .tabName {
@@ -30,16 +60,24 @@
   body {
     background: url("./img27.jpg");
   }
-
-  .mobile-hide {
-    display: none;
-  }
 }
 
-/* Большой дисплей */
 @media (min-width: 992px) {
   .buttons_block {
     display: none;
+  }
+
+  .is_super {
+      display: grid;
+      grid-template-columns: 25% 50% 25%;
+      padding: 15px;
+  }
+
+  .is_regular {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      gap: 1rem;
+      padding: 15px;
   }
 
   .info_block {
@@ -50,6 +88,7 @@
     display: block;
     background: #8bc0f396;
     border-radius: 20px;
+    margin: 15px;
   }
 
   body {
@@ -59,6 +98,7 @@
 
   .nav {
       background-color: rgba(0, 0, 0, 0.3);
+      gap: 15px;
   }
 }
 
@@ -75,14 +115,10 @@
   text-align: left;
 }
 
-.no_decoration {
-  text-decoration: none;
-  color: #2d2d01;
-}
-
 .tabName {
   font-size: 25px;
   text-align: center;
+    margin: 15px;
   #background-color: #5c9ead;
   background-color: #29221fa6;
   font-family: serif;
@@ -123,14 +159,14 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  font-weight: 700;
+  font-size: 22px;
 }
 
 .nav {
   width: 100%;
   text-align: center;
-  height: 70px;
   backdrop-filter: blur(100px);
-  gap: 15px;
 }
 
 .nav-link {
@@ -178,7 +214,7 @@ li {
 }
 
 .main_button.active {
-  color: #ff00ff;
+  color: #255348;
 }
 
 .main_button {

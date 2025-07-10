@@ -1,0 +1,50 @@
+.my_block {
+  color: #2f3043fa;
+  margin: 30px;
+}
+
+.btn-yellow {
+  background: #d8be6f;
+  color: #2f3043fa;
+}
+
+.btn-blue {
+  background: #4879c0;
+  color: white;
+}
+
+.btn-green {
+  background: #67ae9e;
+  color: white;
+}
+
+.btn-round {
+    border-radius: 15px;
+    border-width: 0;
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.btn-basic {
+  border-radius: 5px;
+  border-width: 0;
+  margin-block: 15px;
+}
+
+.category-manage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.category-formats {
+  text-align: start;
+}
+
+.no_decoration {
+  text-decoration: none;
+  color: #105042;
+  text-transform: uppercase;
+}
