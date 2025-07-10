@@ -18,7 +18,7 @@ const Tab = ({ add_class, content, id_elem, is_super, tabName }) => {
       : is_super == 'true' && id_elem != 'common_line' ? 'col-lg-3'
       : is_super != 'true' && id_elem == 'my_block' ? 'col-lg-4'
       : 'col-lg-6'}  
-    m-4 p-2 frame ${add_class}`; 
+    m-4 p-4 frame ${add_class}`; 
 
   return( <div id={id_elem} className={classN} >
             <h5 className='tabName'>{tabName.toUpperCase()}</h5>
@@ -136,9 +136,9 @@ export const Profile = ({ is_super, userid, username }) => {
     </div>
       <div className="row justify-content-md-center">
 
-        <Tab add_class='active'  content={personal} id_elem='my_block' is_super={is_super} tabName="My lovely things" />
+        <Tab add_class='active'  content={personal} id_elem='my_block' is_super={is_super} tabName="My Collection" />
 
-        <Tab add_class='' id_elem='common_line' content={common} is_super={is_super} tabName="Common line" />
+        <Tab add_class='' id_elem='common_line' content={common} is_super={is_super} tabName="Shared Files" />
 
     { is_super == 'true' && 
 

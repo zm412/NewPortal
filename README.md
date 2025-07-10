@@ -210,3 +210,5 @@ $npm run dev
 (in the zm412 / capstone folder)  
 
 *Any questions, please refer to my email zm412412@gmail.com*
+
+npm install --save-dev webpack webpack-cli babel-loader style-loader css-loader @babel/core @babel/preset-env @babel/plugin-transform-runtime

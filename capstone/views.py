@@ -48,7 +48,6 @@ def index(request):
         return render(request, "capstone/index.html")
     else:
 
-
         return render(request, "capstone/login.html")
 
 
