@@ -125,7 +125,7 @@ export const Manage_categories = () => {
 
   return (
     <div className="center_cl">
-      <h3>List of categories</h3>
+      <h2>Categories</h2>
       {list}
     </div>
   );

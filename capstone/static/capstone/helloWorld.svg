@@ -1,6 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="60" viewBox="0 0 180 60">
-    <text text-anchor="middle" fill="white" x="50%" y="30%" dy="30%" font-size="30">
-      Hello world!
-    </text>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
 
+<svg
+   width="59.73336mm"
+   height="7.8058825mm"
+   viewBox="0 0 59.73336 7.8058825"
+   version="1.1"
+   id="svg8260"
+   sodipodi:docname="drawing-13.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview8262"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.9091883"
+     inkscape:cx="24.617792"
+     inkscape:cy="32.736425"
+     inkscape:window-width="1918"
+     inkscape:window-height="1030"
+     inkscape:window-x="1920"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs8257">
+    <rect
+       x="109.59432"
+       y="110.60707"
+       width="240.6069"
+       height="50.254246"
+       id="rect8383" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-29.163379,-30.645312)">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text8381"
+       style="font-weight:600;font-stretch:condensed;font-size:37.3333px;font-family:'Noto Serif Display';-inkscape-font-specification:'Noto Serif Display Semi-Bold Condensed';white-space:pre;shape-inside:url(#rect8383);fill:#ffb100;stroke:#c1b300;stroke-width:0.755906;stroke-linecap:round;stroke-linejoin:bevel;paint-order:fill markers stroke"><tspan
+         x="109.59375"
+         y="144.57607"
+         id="tspan8442">Hello World!    </tspan></text>
+  </g>
+</svg>

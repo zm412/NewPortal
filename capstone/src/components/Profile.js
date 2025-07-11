@@ -149,7 +149,7 @@ export const Profile = ({ is_super, userid, username }) => {
           <button
             data-tab="admin_panel"
             onClick={(e) => openTab(e)}
-              className="mt-3 btn-green btn-round p-2 btn-round main_button col-sm-5"
+            className="mt-3 btn-green btn-round p-2 btn-round main_button col-sm-5"
           >
             Admin panel
           </button>

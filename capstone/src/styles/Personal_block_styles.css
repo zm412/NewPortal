@@ -6,6 +6,7 @@
 .btn-yellow {
   background: #d8be6f;
   color: #2f3043fa;
+  border-radius: 25px;
 }
 
 .btn-blue {
@@ -30,7 +31,7 @@
 .btn-basic {
   border-radius: 5px;
   border-width: 0;
-  margin-block: 15px;
+  margin-block: 10px;
 }
 
 .category-manage {

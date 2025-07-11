@@ -132,7 +132,7 @@ export const UploadFile = () => {
     <div className="row mt-5">
       <button
         data-connect="#id_type_category"
-        className="btn-basic btn-yellow mt-2 p-2 center_cl col-sm-7"
+        className="btn-round btn-yellow mt-2 p-2 center_cl col-sm-7"
         onClick={handlerButton}
       >
         Add files
