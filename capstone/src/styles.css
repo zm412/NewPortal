@@ -82,6 +82,12 @@
   }
 }
 
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+}
 .navbar-nav {
   font-size: 20px;
 }
@@ -291,6 +297,11 @@ li {
 .main_button {
   margin-left: auto;
   margin-right: auto;
+}
+
+.dropdown-custom {
+  background-color: #6c747d00;
+  border-width: 0;
 }
 
 nav li:hover > .submenu {

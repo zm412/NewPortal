@@ -1,0 +1,78 @@
+.honeycomb {
+ background-image: url('/img/i.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+}
+
+.background {
+    max-width: 100%;
+}
+
+.poligon {
+    mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
+
+}
+
+.cells_small {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    backdrop-filter: blur(25px);
+    mask-image: radial-gradient(circle, black 50%, transparent 100%);
+}
+
+.rect {
+  transition: fill 0.3s ease;
+}
+
+.rect:hover {
+  fill: #c62980; 
+}
+
+.frontend {
+    fill: #5fb7a0;
+}
+
+.backend {
+    fill: #f39c6b;
+}
+
+.tools {
+    fill: #c278b4;
+}
+
+.devops {
+    fill: #6d9ee6;
+}
+
+.text {
+    font: bold 20px sans-serif;
+    fill: white;
+}
+
+.cells_header {
+    font: bold 40px sans-serif;
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    color: #043d86;
+}
+
+.cells_label {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+
+}
+
+.cell_text {
+    border-radius: 35px;
+}
+

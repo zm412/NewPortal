@@ -1,0 +1,18 @@
+.swiper-wrapper {
+    margin-block: 20px;
+}
+
+.swiper-slide {
+    display: grid !important;
+    grid-template-rows: 1fr 50px;
+    color: red;
+    background: #eeb1b1;;
+}
+
+.swiper-line {
+    background: linear-gradient(to right, #eeb1b1, #6a6f96);
+}
+
+.slide-img {
+    max-width: 100%;
+}

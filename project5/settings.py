@@ -67,7 +67,7 @@ ROOT_URLCONF = 'project5.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'spa/dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,6 +80,11 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'capstone/static'),
+    os.path.join(BASE_DIR, 'spa/dist'),
+]
+
 WSGI_APPLICATION = 'project5.wsgi.application'
 
 
@@ -87,7 +92,6 @@ WSGI_APPLICATION = 'project5.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),

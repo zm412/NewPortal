@@ -1,0 +1,313 @@
+import styles from './Honeycomb.module.css';
+import heroRight from '../../../assets/img/right.png';
+
+const colors = ['#83B8FC', '#8351FF', '#B294FB', '#FE95D6'];
+
+const icons = [
+  { color: colors[1], single_icon: 'img/cell-finance.svg' },
+  { color: colors[0], single_icon: 'img/cell-sales-icon.svg' },
+  { color: colors[2], single_icon: 'img/cell-staff.svg' },
+  { color: colors[3], single_icon: 'img/cell-production.svg' },
+];
+
+const cells_list = {
+  marketing: [
+    { color: colors[0], class: 'cell_text_uppercase', icon: false, label: 'Планирование продаж', link: '#' },
+    { color: colors[0], class: 'cell_text_division', icon: 'img/cell-sales-icon.svg', label: 'Маркетинг продажи', link: '#' },
+    { color: colors[0], class: 'cell_text_uppercase', icon: false, label: 'Планирование бонусов и компенсаций', link: '#' },
+    { color: colors[0], class: 'cell_text_uppercase', icon: false, label: 'Планирование ассортимента', link: '#' },
+  ],
+  finance: [
+    { color: colors[1], class: 'cell_text_uppercase', icon: false, label: 'Моделирование бизнеса', link: '#' },
+    { color: colors[1], class: 'cell_text_uppercase', icon: false, label: 'Планирование САРЕХ и МБП', link: '#' },
+    { color: colors[1], class: 'cell_text_division', icon: 'img/cell-finance.svg', label: 'Финансы', link: '#' },
+    { color: colors[1], class: 'cell_text_uppercase', icon: false, label: 'Стратегическое планирование', link: '#' },
+    { color: colors[1], class: 'cell_text_uppercase', icon: false, label: 'Бюджетирование', link: '#' },
+    { color: colors[1], class: 'cell_text_uppercase', icon: false, label: 'Управление взаиморасчетами', link: '#' },
+    { color: colors[1], class: 'cell_text_uppercase', icon: false, label: 'Консолидация трансформация отчеты', link: '#' },
+    { color: colors[1], class: 'cell_text_uppercase', icon: false, label: 'Налоговое планирование', link: '#' },
+  ],
+  staff: [
+    { color: colors[2], class: 'cell_text_uppercase', icon: false, label: 'Планирование персонала', link: '#' },
+    { color: colors[2], class: 'cell_text_uppercase', icon: false, label: 'Оптимизация расписания', link: '#' },
+    { color: colors[2], class: 'cell_text_uppercase', icon: false, label: 'Планирование ФОТ', link: '#' },
+    { color: colors[2], class: 'cell_text_division', icon: 'img/cell-staff.svg', label: 'Персонал', link: '#' },
+  ],
+  plan: [
+    { color: colors[3], class: 'cell_text_uppercase', icon: false, label: 'Планирование производства', link: '#' },
+    { color: colors[3], class: 'cell_text_uppercase', icon: false, label: 'Планирование взаимодействий с поставщиками', link: '#' },
+    { color: colors[3], class: 'cell_text_division', icon: 'img/cell-production.svg', label: 'Производство цепочки поставок', link: '#' },
+    { color: colors[3], class: 'cell_text_uppercase', icon: false, label: 'Планирование продаж и операций(S&OP)', link: '#' },
+    { color: colors[3], class: 'cell_text_uppercase', icon: false, label: 'Планирование складской логистики', link: '#' },
+    { color: colors[3], class: 'cell_text_uppercase', icon: false, label: 'Оптимизация закупок и отгрузок', link: '#' },
+    { color: colors[3], class: 'cell_text_uppercase', icon: false, label: 'Оптимизация производства', link: '#' },
+    { color: colors[3], class: 'cell_text_uppercase', icon: false, label: 'Планирование себестоимости', link: '#' },
+  ]
+};
+
+const mask3 = [
+  [cells_list.finance[5], icons[0]],
+  [cells_list.finance[2], cells_list.finance[7]],
+  [cells_list.finance[6], cells_list.finance[3]],
+  [cells_list.finance[1], cells_list.finance[4]],
+];
+
+const { finance = [], marketing = [], staff = [], plan = [] } = cells_list || {};
+
+const mask2 = [
+  [null, null, marketing[3], colors[0], marketing[0], colors[0], plan[0]],
+  [null, finance[6], colors[0], marketing[1], colors[0], marketing[2], colors[3], plan[6]],
+  [finance[0], colors[1], finance[1], null, null, null, plan[6], colors[3], plan[1]],
+  [colors[1], finance[2], colors[1], null, null, null, colors[3], plan[2], colors[3]],
+  [finance[3], colors[1], finance[4], null, null, null, plan[3], colors[3], plan[4]],
+  [null, finance[5], colors[1], staff[2], colors[2], staff[1], colors[2], plan[5]],
+  [null, null, finance[7], colors[2], staff[3], colors[2], staff[0]]
+];
+
+const mask4 = [
+  [finance[5], icons[0]],
+  [finance[2], finance[7]],
+  [finance[6], finance[3]],
+  [finance[1], finance[4]],
+  [finance[3], marketing[0]],
+  [icons[1], marketing[1]],
+  [marketing[2], staff[0]],
+  [staff[1], icons[2]],
+  [staff[2], plan[0]],
+  [icons[3], plan[2]],
+  [plan[1], plan[3]],
+  [plan[4], plan[5]],
+  [plan[6], null]
+];
+
+const ButtonBlock = ({ cell, x, y }) => {
+  if (!cell) return null;
+
+  return (
+    <svg
+      width="170"
+      height="100"
+      x={x}
+      y={y}
+      className="button_block"
+    >
+      <defs>
+        <linearGradient
+          id={`grad-${x}-${y}`}
+          x1="0%"
+          y1="0%"
+          x2="100%"
+          y2="100%"
+        >
+          <stop offset="0%" stopColor={cell.color} />
+          <stop offset="100%" stopColor={cell.color} />
+        </linearGradient>
+      </defs>
+
+      <path
+        d="M26.1497 6.80965C28.9184 2.56168 33.6457 0 38.7163 0H127.284C132.355 0 137.082 2.56169 139.85 6.80966L162.662 41.8097C165.907 46.7879 165.907 53.2121 162.662 58.1903L139.85 93.1903C137.082 97.4383 132.355 100 127.284 100H38.7163C33.6457 100 28.9184 97.4383 26.1497 93.1903L3.33823 58.1903C0.0936408 53.2121 0.0936427 46.7879 3.33824 41.8097L26.1497 6.80965Z"
+        fill={`url(#grad-${x}-${y})`}
+      />
+
+      {cell.single_icon && (
+        <image
+          x={43}
+          y={25}
+          height="50%"
+          width="50%"
+          href={cell.single_icon}
+        />
+      )}
+
+      {cell.label && (
+        <foreignObject x={23} y={10} width="70%" height="100%">
+          <div>
+            <a href="#" className="mobile_link">
+              {cell.label}
+            </a>
+          </div>
+        </foreignObject>
+      )}
+    </svg>
+  );
+};
+
+const FullView = ({ mask2 = [] }) => {
+  return (
+    <div className="cells_small">
+      <svg width="100%" height="100%" viewBox="0 0 1100 2000" xmlns="http://www.w3.org/2000/svg">
+        {mask2.map((row, i) =>
+          row.map((cell, j) => {
+            let x = j * 95;
+            let y = i * 95;
+            let size = 30;
+            let label = "";
+            let color = "";
+            let iconUrl = null;
+            let className = "";
+            let transform = "rotate(0)";
+            let rectY = 100;
+            let labelX = 40;
+            let labelY = 45;
+
+            if (Array.isArray(cell)) return null;
+
+            if (typeof cell === "object" && cell !== null) {
+              size = 180;
+              color = cell.color;
+              label = cell.label;
+              iconUrl = cell.icon;
+              className = cell.class;
+              transform = "rotate(-45 3.00012 198)";
+              rectY = 140;
+              if (iconUrl) labelY = 50;
+            } else if (typeof cell === "string") {
+              x += 65;
+              y += 55;
+              color = cell;
+              transform = "rotate(0)";
+              rectY = 100;
+            } else if (cell === null) {
+              return null;
+            }
+
+            return (
+              <svg
+                key={`${i}-${j}`}
+                x={x}
+                y={y}
+                width={size}
+                height={size}
+                viewBox="0 0 300 300"
+                fill={color}
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect
+                  x="45"
+                  y={rectY}
+                  width="200"
+                  height="200"
+                  rx="45"
+                  transform={transform}
+                />
+                {iconUrl && (
+                  <image
+                    x="95"
+                    y="40"
+                    height="25%"
+                    width="25%"
+                    href={iconUrl}
+                  />
+                )}
+                {label && (
+                  <foreignObject
+                    className={className}
+                    x={labelX}
+                    y={labelY}
+                    width="65%"
+                    height="70%"
+                    textAnchor="middle"
+                  >
+                    <div>
+                      <a href="#" className="button_link">
+                        {label}
+                      </a>
+                    </div>
+                  </foreignObject>
+                )}
+              </svg>
+            );
+          })
+        )}
+
+        <svg
+          x="280"
+          y="175"
+          width="380"
+          height="380"
+          viewBox="0 0 408 408"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="0"
+            y="200"
+            width="270"
+            height="270"
+            rx="35"
+            transform="rotate(-45 3.00012 198)"
+            fill="white"
+          />
+          <foreignObject
+            x="50"
+            y="70"
+            width="65%"
+            height="70%"
+            textAnchor="middle"
+          >
+            <div className="cells-header">Интегрированное планирование</div>
+          </foreignObject>
+        </svg>
+      </svg>
+    </div>
+  );
+};
+
+const PlanCells = () => {
+  const isShort = mask3.length <= 4;
+  const blockHeight = isShort ? 380 : 1550;
+
+  return (
+    <div className="cells_small">
+      <h2 className="bold-title">Интегрированное планирование:</h2>
+      <div className="cells-title">
+        <p>ключевой инструмент корпоративного управления</p>
+      </div>
+
+      <svg
+        width="100%"
+        height="100%"
+        className="plan_block_svg"
+        viewBox={`0 0 340 ${blockHeight}`}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        {mask3.map((row, i) =>
+          row.map((cell, j) => {
+            let x = j * 170;
+            let y = i * 120 - 60;
+
+            if (!isShort) y = i * 120;
+            if (j === 1) {
+              x = j * 170 - 10;
+              y = isShort ? i * 120 : i * 120 + 60;
+            }
+
+            return <ButtonBlock key={`${i}-${j}`} cell={cell} x={x} y={y} />;
+          })
+        )}
+      </svg>
+
+      {isShort && (
+        <div className="send">
+          <button
+            className="button-to-form button-to-form--lilac-not-effects cells_button"
+            type="submit"
+            name="send"
+          >
+            ЗАГРУЗИТЬ ЕЩЕ
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const Honeycomb = () => {
+    return (
+     <section className={styles.hero}>
+        <FullView mask2={mask2} /> 
+    </section>
+    );
+};
+
+export default Honeycomb;

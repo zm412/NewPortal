@@ -1,4 +1,3 @@
-
 from django.urls import path
 from . import views
 
@@ -28,4 +27,6 @@ urlpatterns = [
     path("share_item/", views.share_item, name="share_item"),
     path("get_items_list/", views.get_items_list, name="get_items_list"),
     path("get_admin_check/", views.get_admin_check, name="get_admin_check"),
+    path("spa/", views.SpaView.as_view(), name="spa"),
+    path("spa/<path:unused>", views.SpaView.as_view()),
 ]

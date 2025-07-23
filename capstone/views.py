@@ -9,9 +9,13 @@ from django import forms
 from django.utils import timezone
 from datetime import timedelta, datetime
 from django.views.decorators.http import require_http_methods
+from django.views.generic import TemplateView
 import json
 
 from .models import User, Item, Category, Shared_item, Comment
+
+class SpaView(TemplateView):
+    template_name = "index.html"
 
 def get_categories():
     category_list = Category.objects.filter(type_content=None)
