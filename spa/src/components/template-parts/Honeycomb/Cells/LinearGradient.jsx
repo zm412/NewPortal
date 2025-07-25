@@ -11,7 +11,6 @@ const colors = {
 
 const LinearGradient = (props) => {
     const {id} = props
-    console.log(props, 'kkkk')
     const [startColor, endColor] = colors[id] || ["", ""];
        return  <defs>
                 <linearGradient

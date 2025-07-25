@@ -1,9 +1,28 @@
 .honeycomb {
- background-image: url('/img/i.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  border-radius: 25px;
+    display: grid;
+    grid-template-columns: 60% 39%;
+    gap: 1%;
+}
+
+@media (max-width: 991px) {
+    .honeycomb {
+        grid-template-columns: 100%;
+        grid-template-rows: 700px 500px;
+        gap: 30px;
+    }
+}
+
+.honeycomb_block {
+    background-image: url("/img/i.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+}
+
+.honeycomb_info {
+    background: #4c5eb6bf;
+    border-radius: 25px;
 }
 
 .background {
@@ -12,7 +31,6 @@
 
 .poligon {
     mask-image: url(https://mdn.github.io/shared-assets/images/examples/mdn.svg);
-
 }
 
 .cells_small {
@@ -24,11 +42,11 @@
 }
 
 .rect {
-  transition: fill 0.3s ease;
+    transition: fill 0.3s ease;
 }
 
 .rect:hover {
-  fill: #c62980; 
+    fill: #c62980;
 }
 
 .frontend {
@@ -54,9 +72,9 @@
 
 .cells_header {
     font: bold 40px sans-serif;
-    height: 100%; 
-    display: flex; 
-    align-items: center; 
+    height: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
     color: #043d86;
 }
@@ -65,14 +83,12 @@
     color: white;
     font-size: 15px;
     font-weight: 600;
-    height: 100%; 
-    display: flex; 
-    align-items: center; 
+    height: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
-
 }
 
 .cell_text {
     border-radius: 35px;
 }
-

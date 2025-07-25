@@ -1,7 +1,6 @@
 import styles from "../Honeycomb.module.css";
 
 const CellLabel = (props) => {
-    console.log(props, 'PPPP')
     let { label, x, y, onClick, svgY } = props
     let transform = "rotate(0)";
 

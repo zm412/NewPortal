@@ -2,7 +2,11 @@ import LinearGradient from "./LinearGradient";
 import classNames from 'classnames';
 import styles from '../Honeycomb.module.css';
 
-const CellsHeader = ({headerText}) => {
+const CellsHeader = ({headerText, isMobile}) => {
+    if (isMobile) {
+        return
+    }
+
     return <svg
           x="235"
           y="170"

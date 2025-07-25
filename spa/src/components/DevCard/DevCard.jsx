@@ -5,12 +5,14 @@ import '../../assets/styles/grid.css'
 
 const DevCard = () => {
     return (
-        <div className="custom-container">
+        <>
             <Hero />
-            <SwiperLink />
-            <Honeycomb />
-            <h1>JJJJJJJJJjjj</h1>
-        </div>
+            <div className="custom-container">
+                <SwiperLink />
+                <Honeycomb />
+                <h1>JJJJJJJJJjjj</h1>
+            </div>
+        </>
     );
 };
 

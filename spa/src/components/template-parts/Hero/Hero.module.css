@@ -12,11 +12,17 @@
   #background-color: #2f1b0f;
   background-color: #6a6f96;
   background-image: 
+    url('/img/stars.png'),
     url('../../../assets/img/left.png'), 
     url('../../../assets/img/right.png'),
     url('../../../assets/img/center2.png');
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: center left, center right, top left;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: center, center left, center right, 10% 0;
+    background-size: 
+        cover, 
+        auto, 
+        auto, 
+        auto;
 }
 
 .overlay {
