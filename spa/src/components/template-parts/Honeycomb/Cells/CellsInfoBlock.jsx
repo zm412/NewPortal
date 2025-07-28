@@ -1,11 +1,10 @@
-import styles from "../Honeycomb.module.css";
+import styles from "../Honeycomb.module.scss";
 
- const CellsInfoBlock = () => {
+ const CellsInfoBlock = ({imgUrl}) => {
 
     return (
-        <div >
-
-            iljljlkj
+        <div className={styles.image_info}>
+            <img src={imgUrl} alt="" />
         </div>
     );
 };

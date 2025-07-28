@@ -1,4 +1,4 @@
-import styles from "../Honeycomb.module.css";
+import styles from "../Honeycomb.module.scss";
 
 const CellLabel = (props) => {
     let { label, x, y, onClick, svgY } = props

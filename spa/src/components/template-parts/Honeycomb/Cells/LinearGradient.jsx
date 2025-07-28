@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import styles from '../Honeycomb.module.css';
+import styles from '../Honeycomb.module.scss';
 
 const colors = {
     frontend: ["#127b5f", "#5fb7a0"],

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "./Honeycomb.module.css";
+import styles from "./Honeycomb.module.scss";
 import heroRight from "../../../assets/img/right.png";
 import FullView from "./FullView.jsx";
 import CellsInfoBlock from "./Cells/CellsInfoBlock.jsx";
@@ -8,6 +8,9 @@ import CellsInfoBlock from "./Cells/CellsInfoBlock.jsx";
 
 const Honeycomb = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+    const [headerText, setText] = useState("Skills");
+    const [currentCell, setCurrentCell] = useState({})
+    console.log(currentCell, 'kjljkjlkj')
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,11 +25,11 @@ const Honeycomb = () => {
     return (
         <section className={styles.honeycomb}>
             <div className={styles.honeycomb_block}>
-                <FullView isMobile={isMobile}/>
+                <FullView isMobile={isMobile} setCurrentCellHandler={setCurrentCell} currentCell={currentCell}/>
             </div>
 
             <div className={styles.honeycomb_info}>
-                <CellsInfoBlock />
+                <CellsInfoBlock imgUrl={currentCell && currentCell.imgUrl || ''} />
             </div>
         </section>
     );

@@ -1,6 +1,6 @@
 import LinearGradient from "./LinearGradient";
 import classNames from 'classnames';
-import styles from '../Honeycomb.module.css';
+import styles from '../Honeycomb.module.scss';
 
 const CellsHeader = ({headerText, isMobile}) => {
     if (isMobile) {
@@ -35,7 +35,7 @@ const CellsHeader = ({headerText, isMobile}) => {
             textAnchor="middle"
             className={styles.header_label}
           >
-            <div className={styles.cells_header}>{headerText}</div>
+            <div className={styles.cells_header}>{headerText || "Skills"}</div>
           </foreignObject>
         </svg>
  

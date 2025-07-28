@@ -1,14 +1,26 @@
+@use '../../../assets/styles/size' as *;
 .honeycomb {
     display: grid;
     grid-template-columns: 60% 39%;
     gap: 1%;
 }
 
+@media (min-width: 768px) {
+    .cells_small {
+        backdrop-filter: blur(25px);
+        mask-image: radial-gradient(circle, black 50%, transparent 100%);
+    }
+}
+
 @media (max-width: 991px) {
     .honeycomb {
-        grid-template-columns: 100%;
-        grid-template-rows: 700px 500px;
-        gap: 30px;
+    grid-auto-rows: min-content;
+    grid-template-columns: 80%;
+        justify-content: center;
+    }
+
+    .cells_small {
+
     }
 }
 
@@ -36,9 +48,7 @@
 .cells_small {
     display: flex;
     justify-content: center;
-    padding: 50px;
-    backdrop-filter: blur(25px);
-    mask-image: radial-gradient(circle, black 50%, transparent 100%);
+    padding: fluid-size(20, 50);
 }
 
 .rect {
@@ -76,7 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #043d86;
+    color: var(--cells-header-color);
 }
 
 .cells_label {
@@ -91,4 +101,10 @@
 
 .cell_text {
     border-radius: 35px;
+}
+
+.image_info {
+    display: grid;
+      place-items: center;
+      height: 100%;
 }

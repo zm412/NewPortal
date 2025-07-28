@@ -1,0 +1,92 @@
+@use './assets/styles/size' as *;
+
+#root {
+  text-align: center;
+  background: var(--bg);
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+    background: var(--bg);
+ 
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.dusk-theme {
+    --mobile-size: 991px;
+    --logo-fill: #a1aaeefc;
+    --logo-stroke: #6941cd;
+    --bg: #303248;
+    --bg-header: none;
+    --bg-hero-1: url('/img/stars.png');
+    --bg-hero-2: url('./img/left.png');
+    --bg-hero-3: url('./img/right.png');
+    --bg-hero-4: url('./img/center2.png');
+
+    --bg-hero-repeat-1: no-repeat;
+    --bg-hero-repeat-2: no-repeat;
+    --bg-hero-repeat-3: no-repeat;
+    --bg-hero-repeat-4: no-repeat;
+
+    --bg-hero-pos-1: center;
+    --bg-hero-pos-2: center left;
+    --bg-hero-pos-3: center right;
+    --bg-hero-pos-4: 10% 0;
+
+    --bg-hero-size-1: cover;
+    --bg-hero-size-2: auto;
+    --bg-hero-size-3: auto;
+    --bg-hero-size-4: auto;
+    --bg-hero-color: #6a6f96;
+
+    --main-color-1: #eeb1b1;
+    --main-color-2: #6a6f96;
+
+    --cells-header-color: #043d86;
+}
+
+.acid-1-theme {
+    --bg: #232323;
+    --color: #ffffff;
+    --bg-left: #25040f;
+    --border-left: #c83164;
+    --bg-center: #032322;
+    --border-center: #14a199;
+    --bg-right: #14041f;
+    --border-right: #9527de;
+    --decor-right: #2e094c;
+    --bg-header: #241704;
+    --border-header: #ec9301;
+    --color-header: #ec9301;
+}
+

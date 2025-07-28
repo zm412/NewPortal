@@ -1,0 +1,31 @@
+@use '../../../assets/styles/size' as *;
+
+.swiper {
+     margin-block: 20px;
+
+    .swiper-slide {
+        display: grid !important;
+        color: red;
+        background: var(--main-color-1);
+    }
+
+    .swiper-line {
+        background: linear-gradient(to right, var(--main-color-1), var(--main-color-2));
+    }
+
+    .slide-img {
+        max-width: 100%;
+    }
+}
+
+
+.slide {
+    display: grid !important;
+    color: red;
+    background: var(--main-color-1);
+   }
+
+.swiper-line {
+    height: fluid-size(25, 45);
+    background: linear-gradient(to right, var(--main-color-1), var(--main-color-2));
+}

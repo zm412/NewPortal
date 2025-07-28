@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+.header-inner {
+	height: 70px;
+	background: var(--bg-header);
+	box-sizing: border-box;
+	border-radius: 72px;
+    border: solid 1px var(--border-header);
+	padding-inline: 32px;
+	display: grid;
+	gap: 32px;
+    grid-template-columns: 25% 50% 20%;
+}
+
+@media (max-width: 991px) {
+    .header-inner {
+        height: 110px;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 50px;
+        gap: 0;
+    }
+
+    .profile-data {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .profile-data {
+        display: flex;
+    }
+}
+
+.logo-img {
+    height: 70px;
+    max-height: 100%;
+	align-self: center;
+}
+
+.logo_style {
+  font-family: 'MathJax_Caligraphic', serif;
+  font-weight: bold;
+  font-size: 48px;
+  fill: var(--logo-fill);
+  stroke: var(--logo-stroke);
+}
+
+.custom-nav {
+	display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+	display: flex;
+	align-items: center;
+}
+
+.nav-icon {
+	block-size: 17px;
+}
+
+.nav-menu-label {
+	font-weight: 700;
+	margin-inline-start: 8px;
+    color: var(--border-header);
+}
+
+.nav-button {
+	inline-size: 121px;
+	block-size: 41px;
+	background: #01F0D0;
+	border-width: 0;
+	border-radius: 41px;
+}
+
+.profile-data {
+	align-items: center;
+	gap: 10px;
+}
+
+
+.profile-img {
+	inline-size: 44px;
+	block-size: 44px;
+}
+
+.profile-owner {
+	font-weight: 700;
+}
+
+.settings-icon {
+	block-size: 20px;
+}
+

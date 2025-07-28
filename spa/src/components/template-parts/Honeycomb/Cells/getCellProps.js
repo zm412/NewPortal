@@ -1,4 +1,4 @@
-import styles from "../Honeycomb.module.css";
+import styles from "../Honeycomb.module.scss";
 import classNames from "classnames";
 
 export function getCellProps(cell) {

@@ -5,7 +5,7 @@ import CellIcon from "./CellIcon";
 import LinearGradient from "./LinearGradient";
 import { getCellProps } from "./getCellProps.js";
 import classNames from "classnames";
-import styles from "../Honeycomb.module.css";
+import styles from "../Honeycomb.module.scss";
 
 const Cells = ({ j, i, cell, clickHandler }) => {
     if (!cell || Array.isArray(cell)) return null;
@@ -46,7 +46,7 @@ const Cells = ({ j, i, cell, clickHandler }) => {
                 y={rectY}
                 fill={`url(#${cell?.color})` }
                 transform={transform}
-                onClick={() => clickHandler(label)}
+                onClick={() => clickHandler(cell)}
                 className={classN}
             />
             {iconUrl && <CellIcon iconUrl={iconUrl} />}
@@ -56,7 +56,7 @@ const Cells = ({ j, i, cell, clickHandler }) => {
                     x={labelX}
                     y={labelY}
                     svgY={svgY}
-                    onClick={clickHandler}
+                    onClick={() => clickHandler(cell)}
                 />
             )}
         </svg>

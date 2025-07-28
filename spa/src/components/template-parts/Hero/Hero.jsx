@@ -1,7 +1,11 @@
-import styles from './Hero.module.css';
+import styles from './Hero.module.scss';
 import heroRight from '../../../assets/img/right.png';
+import { useTheme } from '../../../contexts/ThemeContext';
 
 const Hero = () => {
+  const { theme } = useTheme();
+    console.log(theme, 'THEME')
+
     return (
      <section className={styles.hero}>
       <div className={styles.overlay}>

@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import swiperLinkPortalImg from "../../../assets/img/swiperLinkPortalImg.png";
-import styles from "./SwiperLink.module.scss";
 import "./SwiperLink.css";
+import styles from "./SwiperLink.module.scss";
 
 // Import Swiper styles
 import "swiper/css";
@@ -10,22 +10,13 @@ import "swiper/css/navigation";
 const SwiperLink = () => {
     return (
         <Swiper
-            slidesPerView={1}
+            spaceBetween={50}
+            slidesPerView={3}
             onSlideChange={() => console.log("slide change")}
             onSwiper={(swiper) => console.log(swiper)}
             className={styles.swiper}
-            breakpoints={{
-                768: {
-                  slidesPerView: 2,
-                  spaceBetween: 30,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 40,
-                },
-              }}
         >
-            <SwiperSlide className={styles.slide}>
+            <SwiperSlide>
                 <div>
                     <a
                         href="https://zm410.pythonanywhere.com"
@@ -35,31 +26,30 @@ const SwiperLink = () => {
                         <img
                             src={swiperLinkPortalImg}
                             alt="Preview of Example"
-                            className={ styles[ "slide-img" ] }
+                            className="slide-img"
                         />
                     </a>
                 </div>
                 <div className={styles["swiper-line"]}></div>
             </SwiperSlide>
 
-            <SwiperSlide className={styles.slide}>
+            <SwiperSlide>
                 <div></div>
                 <div className={styles["swiper-line"]}></div>
             </SwiperSlide>
 
-            <SwiperSlide className={styles.slide}>
+            <SwiperSlide>
                 <div></div>
-                <div className={styles["swiper-line"]}></div>
+                <div className={ styles[ "swiper-line" ] }></div>
             </SwiperSlide>
 
-            <SwiperSlide className={styles.slide}>
+            <SwiperSlide>
                 <div></div>
-                <div className={styles["swiper-line"]}></div>
             </SwiperSlide>
 
-            <SwiperSlide className={styles.slide}>
+            <SwiperSlide>
                 <div></div>
-                <div className={styles["swiper-line"]}></div>
+                <div className={ styles[ "swiper-line" ] }></div>
             </SwiperSlide>
         </Swiper>
     );

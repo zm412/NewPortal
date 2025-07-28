@@ -6,6 +6,7 @@ export const cellsList = {
             icon: false,
             label: "HTML / CSS / SCSS",
             link: "#",
+            imgUrl: ""
         },
         {
             color: "frontend",
@@ -55,6 +56,7 @@ export const cellsList = {
             icon: "/spa_static/img/cat2-icon.svg",
             label: "Frontend",
             link: "#",
+            imgUrl: "/spa_static/img/cells/frontend.jpg"
         },
     ],
 
